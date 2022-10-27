@@ -30,7 +30,8 @@
         buyItNowBanner();
     }); 
 }
-*/
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 if(window.location.href.indexOf("whatsmyip.com") != -1){
     $("#shownIpv4").text("71.159.22.100"); //Change huge public IP Address
@@ -58,6 +59,46 @@ $(document).ready(function() {
     }
 })
 
+if(window.location.href.indexOf("play.google.com") != -1){
+    async function thing(){
+        await sleep(2000);
+        const list = $(`#yDmH0d > c-wiz.SSPGKf.glB9Ve.nI07g > div > div > div:nth-child(2) > 
+        div.QNJc5c > ul`);
+        
+        list.empty();
+        list.append(`<li class="IFOh3c ">
+        <button class="wtAAs FJcfob"><span class="eiNd8b">
+        <img src="https://play-lh.googleusercontent.com/NXIlvcvdFgCsaePpQn12_24M0ANTjJTsEr5zr8i_21WTTLieGFrFmBywe_i05TB8I3N5kQ" 
+        class="T75of cn8Ate" aria-hidden="true" data-iml="2731.800000011921"></span>
+        <span class="yqsZud">
+        <div class="HgYqic">Add PayPal</div></span></button></li>`);
+        list.append(`<li class="IFOh3c ">
+        <button class="wtAAs FJcfob"><span class="eiNd8b">
+        <img src="https://play-lh.googleusercontent.com/Sy-qD8BSR4BY5bwfx_ptzE1utvlH9jXr1S8V7LBM4VKlDwyOLQp-tyYConlAm44T0bgsOw" 
+        class="T75of cn8Ate" aria-hidden="true" data-iml="2202.699999988079"></span>
+        <span class="yqsZud">
+        <div class="HgYqic">Add credit or debit card</div></span></button></li>`);
+        list.append(`<li class="IFOh3c ">
+        <button id="redeem-button" class="wtAAs FJcfob"><span class="eiNd8b">
+        <img src="https://play-lh.googleusercontent.com/cLoY1LUlKHXk6U2Rrko1-ICqFRkpW8fv45wSuPEH5-D9qQhJfF5KXo2mL8-zy6PplCyZ" 
+        class="T75of cn8Ate" aria-hidden="true" data-iml="2408.4000000059605"></span>
+        <span class="yqsZud">
+        <div class="HgYqic">Redeem code</div></span></button></li>`);
+        await sleep(250);
+        $("#redeem-button").click(function (e) { 
+            alert("Redeem");
+        });
+    }
+    thing();
+}
 
+//button class .wtAAs FJcfob
+//list class IFOh3c 
+*/
 
- 
+if (window.location.href.indexOf("app.sycamoreschool") != -1){
+    $("#theForm > div > div > div.row.loginDiv > div.span8.schoolPicture.hidden-tablet.hidden-phone.hidden-mid").remove();
+    $("#theForm > div > div > div.row.loginDiv").prepend(`<div class=span8>
+    <img src="https://raw.githubusercontent.com/BearmanCodes/Extension/main/Kiryu.jpg" height="426px" width="770px">
+    </div>`);
+}
